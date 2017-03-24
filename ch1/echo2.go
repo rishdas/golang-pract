@@ -6,8 +6,8 @@ import "os"
 func main() {
 	var args, sep string
 
-	for i := 0; i < len(os.Args); i++ {
-		args += sep + os.Args[i]
+	for  _, word := range os.Args[1:] {
+		args += sep + word
 		sep = " "
 	}
 	fmt.Println(args)
